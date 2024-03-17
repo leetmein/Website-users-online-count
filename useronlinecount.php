@@ -12,7 +12,7 @@ $ip = $_SERVER['REMOTE_ADDR'];
 $agent = $_SERVER['HTTP_USER_AGENT'];
 $user_data = $ip . '$' . $agent;
 $base64_encoded_data = base64_encode($user_data);
-$file_name = $base64_encoded_data . '.tmp';
+$file_name = $base64_encoded_data;
 file_put_contents($folder . $file_name, '');
 
 // 3. Count and display the number of users in a folder
